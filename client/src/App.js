@@ -7,10 +7,11 @@ import './App.css';
 import logo from './logo.png';
 
 import Launches from './components/Launches';
+import Pools from './components/Pools';
 import Launch from './components/Launch';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  uri: 'https://api.thegraph.com/subgraphs/name/dhedge/dhedge',
 })
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
               alt="SpaceX"
               style={{ width: 300, display: 'block', margin: 'auto' }}
             />
-            <Route exact path="/" component={Launches} />
-            <Route exact path="/launch/:id" component={Launch} />
+            <Route exact path="/" component={Pools} />
+            {/*<Route exact path="/launch/:id" component={Launch} />*/}
           </div>
         </Router>
       </ApolloProvider>
