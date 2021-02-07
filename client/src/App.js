@@ -6,9 +6,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import logo from './logo.png';
 
-import Launches from './components/Launches';
+// import Launches from './components/Launches';
 import Pools from './components/Pools';
-import Launch from './components/Launch';
+import Trades from './components/Trades';
 
 const client = new ApolloClient({
   uri: 'https://api.thegraph.com/subgraphs/name/dhedge/dhedge',
@@ -25,7 +25,7 @@ function App() {
               style={{ width: 300, display: 'block', margin: 'auto' }}
             />
             <Route exact path="/" component={Pools} />
-            {/*<Route exact path="/launch/:id" component={Launch} />*/}
+            {<Route exact path="/pool/:id" component={Trades} />}
           </div>
         </Router>
       </ApolloProvider>

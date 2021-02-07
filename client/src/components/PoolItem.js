@@ -7,7 +7,7 @@ function formatMoney(number) {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' }).slice(0,-3);
 }
 
-const PoolItem = ({ pool: { id, name, fundValue, fundAddress } }) => {
+const PoolItem = ({ pool: { id, name, manager, fundValue, fundAddress } }) => {
   function externalLink(address) {
     return "https://etherscan.com/address/"+fundAddress.toString()
   }

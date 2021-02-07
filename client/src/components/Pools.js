@@ -5,10 +5,11 @@ import PoolItem from './PoolItem';
 
 const POOLS_QUERY = gql`
   query PoolsQuery {
-    pools (first: 100, orderBy: fundValue, orderDirection: desc) {
+    pools (orderBy: fundValue, orderDirection: desc) {
       id
       fundAddress
       name
+      manager
       fundValue
     }
   }
