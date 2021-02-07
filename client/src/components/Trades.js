@@ -36,9 +36,7 @@ const Trades = (props) => {
     if (error) console.log(error);
     const { id, name } = data.pools[0];
     const exchanges = data.pools[0].exchanges
-    console.log("Exchanges ARE: ", exchanges)
     const displayEachTrade = () => {
-      console.log('first exchange: ', exchanges[0])
       return exchanges.map((exch, i) => (
         <TradesItem key={exch.id} exch={exch}/>
       ))
