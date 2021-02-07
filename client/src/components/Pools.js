@@ -20,7 +20,6 @@ const Pools = () => {
 
   if (loading) return <h4>Loading...</h4>;
   if (error) console.log(error);
-  console.log(data)
   let filteredPools = data.pools;
   let totalPools = filteredPools.length;
 
